@@ -16,11 +16,17 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get('/', function(req,res){
-  res.render("home",{firstContent: homeStartingContent})
+  res.render("home",{firstContent:homeStartingContent});
+
 });
 
+app.get('/about' , function(req,res){
+  res.render("about",{aboutContent:aboutContent});
+});
 
-
+app.get('/contact' , function(req,res){
+  res.render("contact",{contactmeContent:contactContent});
+});
 
 
 
